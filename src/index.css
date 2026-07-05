@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-secondary-200 dark:border-secondary-700;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-secondary-50 via-white to-primary-50 dark:from-secondary-950 dark:via-secondary-900 dark:to-primary-950 text-secondary-900 dark:text-secondary-100 antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 dark:bg-secondary-900/70 backdrop-blur-xl border border-white/20 dark:border-secondary-700/30 shadow-glass dark:shadow-glass-dark;
+  }
+
+  .glass-card {
+    @apply glass rounded-2xl p-6 transition-all duration-300 hover:shadow-lg;
+  }
+
+  .glass-button {
+    @apply glass rounded-xl px-4 py-2 font-medium transition-all duration-300 hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-xl px-6 py-3 font-semibold transition-all duration-300 hover:from-primary-600 hover:to-primary-700 hover:shadow-lg hover:shadow-primary-500/25 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-100 dark:bg-secondary-800 text-secondary-700 dark:text-secondary-200 rounded-xl px-6 py-3 font-semibold transition-all duration-300 hover:bg-secondary-200 dark:hover:bg-secondary-700 active:scale-[0.98];
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary-500 text-primary-500 rounded-xl px-6 py-3 font-semibold transition-all duration-300 hover:bg-primary-50 dark:hover:bg-primary-950 active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply text-secondary-600 dark:text-secondary-400 rounded-xl px-4 py-2 font-medium transition-all duration-300 hover:bg-secondary-100 dark:hover:bg-secondary-800;
+  }
+
+  .btn-danger {
+    @apply bg-gradient-to-r from-error-500 to-error-600 text-white rounded-xl px-6 py-3 font-semibold transition-all duration-300 hover:from-error-600 hover:to-error-700 hover:shadow-lg hover:shadow-error-500/25 active:scale-[0.98];
+  }
+
+  .input-field {
+    @apply w-full bg-white/50 dark:bg-secondary-800/50 border border-secondary-200 dark:border-secondary-700 rounded-xl px-4 py-3 text-secondary-900 dark:text-secondary-100 placeholder-secondary-400 dark:placeholder-secondary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all duration-200;
+  }
+
+  .input-label {
+    @apply block text-sm font-medium text-secondary-700 dark:text-secondary-300 mb-2;
+  }
+
+  .card {
+    @apply glass-card animate-fade-in;
+  }
+
+  .stat-card {
+    @apply glass-card animate-slide-up;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-secondary-600 dark:text-secondary-400 font-medium transition-all duration-200 hover:bg-primary-50 dark:hover:bg-primary-950/50 hover:text-primary-600 dark:hover:text-primary-400;
+  }
+
+  .nav-link.active {
+    @apply bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 font-semibold;
+  }
+
+  .sidebar {
+    @apply glass h-screen w-64 fixed left-0 top-0 flex flex-col z-40;
+  }
+
+  .main-content {
+    @apply ml-64 min-h-screen p-8 transition-all duration-300;
+  }
+
+  .chart-container {
+    @apply glass-card h-80;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .badge-success {
+    @apply badge bg-success-100 dark:bg-success-900/30 text-success-700 dark:text-success-400;
+  }
+
+  .badge-warning {
+    @apply badge bg-warning-100 dark:bg-warning-900/30 text-warning-700 dark:text-warning-400;
+  }
+
+  .badge-error {
+    @apply badge bg-error-100 dark:bg-error-900/30 text-error-700 dark:text-error-400;
+  }
+
+  .badge-primary {
+    @apply badge bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400;
+  }
+
+  .progress-bar {
+    @apply h-3 bg-secondary-100 dark:bg-secondary-800 rounded-full overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-full bg-gradient-to-r from-primary-400 to-primary-600 rounded-full transition-all duration-500;
+  }
+
+  .table-container {
+    @apply glass-card overflow-hidden;
+  }
+
+  .table-header {
+    @apply bg-secondary-50/50 dark:bg-secondary-800/50 border-b border-secondary-200 dark:border-secondary-700;
+  }
+
+  .table-header-cell {
+    @apply px-6 py-4 text-left text-sm font-semibold text-secondary-600 dark:text-secondary-400;
+  }
+
+  .table-row {
+    @apply border-b border-secondary-100 dark:border-secondary-800 hover:bg-secondary-50/50 dark:hover:bg-secondary-800/50 transition-colors;
+  }
+
+  .table-cell {
+    @apply px-6 py-4 text-secondary-700 dark:text-secondary-300;
+  }
+
+  .modal-overlay {
+    @apply fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center animate-fade-in;
+  }
+
+  .modal-content {
+    @apply glass rounded-2xl max-w-md w-full mx-4 animate-scale-in;
+  }
+
+  .chat-bubble {
+    @apply max-w-[80%] p-4 rounded-2xl animate-slide-up;
+  }
+
+  .chat-bubble-user {
+    @apply chat-bubble bg-primary-500 text-white ml-auto rounded-br-sm;
+  }
+
+  .chat-bubble-ai {
+    @apply chat-bubble bg-secondary-100 dark:bg-secondary-800 mr-auto rounded-bl-sm;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-accent-500;
+  }
+
+  .shadow-glass-hover {
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary-100 dark:bg-secondary-800 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary-300 dark:bg-secondary-600 rounded-full hover:bg-secondary-400 dark:hover:bg-secondary-500;
+}

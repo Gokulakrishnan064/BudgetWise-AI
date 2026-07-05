@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  budgetwise-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - VITE_SUPABASE_URL=https://znpxmilappcwqjorpaiu.supabase.co
+        - VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpucHhtaWxhcHBjd3Fqb3JwYWl1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMxNzk5MTUsImV4cCI6MjA5ODc1NTkxNX0.JuRtvoDVazW6ncuAWqaoklVPYPnSw3ArRZTuhNZ8yUE
+    container_name: budgetwise-frontend
+    ports:
+      - "8080:80"
+    restart: unless-stopped
