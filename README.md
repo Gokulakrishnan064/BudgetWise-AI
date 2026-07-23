@@ -193,21 +193,9 @@ For production, the following variables must be configured:
 
 ---
 
-## 🚀 Deploying to Render
+## 🚀 Deployed to Render 
 
-Render will host the Docker container for free.
-
-1. Create a **Web Service** on **[Render.com](https://render.com)**.
-2. Link your GitHub repository `Gokulakrishnan064/BudgetWise-AI` (use the public URL tab if it doesn't show in the list).
-3. Set the Runtime to **Docker**.
-4. Set the Instance Type to **Free**.
-5. Add the following **Environment Variables / Docker Build Args** in the settings:
-   * `PORT` = `80`
-   * `VITE_SUPABASE_URL` = *your_production_supabase_url*
-   * `VITE_SUPABASE_ANON_KEY` = *your_production_supabase_anon_key*
-6. Click **Create Web Service**. 
-
----
+Live on : https://budgetwise-ai-6pqv.onrender.com
 
 ## 🐳 Docker Configuration
 
