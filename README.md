@@ -19,7 +19,7 @@
 
 > **An Intelligent Personal Finance Assistant — dynamic monthly budget projections, recurring bills calendar, stateful AI chat auditor, and PDF/CSV statements.**
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-budgetwise--ai.onrender.com-22C55E?style=for-the-badge)](https://budgetwise-ai-6pqv.onrender.com)
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-budgetwise--ai--6pqv.onrender.com-22C55E?style=for-the-badge)](https://budgetwise-ai-6pqv.onrender.com)
 
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org)
